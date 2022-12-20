@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Neuer Biergarten</title>
+
+</head>
+<body>
+<form action="/biergartenformular" th:object="${biergarten}" method="post">
+    <label for="name">Name Biergarten:</label>
+    <input type="text" id="name" name="name" th:field="*{name}">
+    <label for="preis">Bierpreis:</label>
+    <input type="text" id="preis" name="preis" th:field="*{bierPreis}">
+    <label for="bild">Bild:</label>
+    <input type="text" id="bild" name="bild" th:field="*{bild}">
+    <input type="submit" value="submit"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Speisekarte</title>
+</head>
+<body>
+<h1>Speisen</h1>
+<table style="width: 100%; table-layout: fixed; border: 1px solid black; text-align: left">
+    <tr>
+        <th>Name</th>
+        <th>Preis</th>
+    </tr>
+    <tr th:each="speise : ${speisekarte.speiseListe}">
+        <td th:text="${speise.name}"></td>
+        <td th:text="${speise.preis}"></td>
+    </tr>
+</table>
+<h1>Getränke</h1>
+<table style="width: 100%; table-layout: fixed; border: 1px solid black; text-align: left">
+    <tr>
+        <th>Name</th>
+        <th>Preis</th>
+    </tr>
+    <tr th:each="getraenk : ${speisekarte.getraenkeListe}">
+        <td th:text="${getraenk.name}"></td>
+        <td th:text="${getraenk.preis}"></td>
+    </tr>
+</table>
+<h1>Desserts</h1>
+<table style="width: 100%; table-layout: fixed; border: 1px solid black; text-align: left">
+    <tr>
+        <th>Name</th>
+        <th>Preis</th>
+    </tr>
+    <tr th:each="dessert : ${speisekarte.dessertListe}">
+        <td th:text="${dessert.name}"></td>
+        <td th:text="${dessert.preis}"></td>
+    </tr>
+</table>
+</body>
+</html>

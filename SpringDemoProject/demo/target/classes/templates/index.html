@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Biergarten Finder</title>
+</head>
+<body>
+    <h1>Biergartenliste</h1>
+    <table style="width: 100%; table-layout: fixed; border: 1px solid black; text-align: left">
+        <tr>
+            <th>Biergarten Name</th>
+            <th>Bierpreis</th>
+        </tr>
+        <tr th:each="biergarten : ${biergartenliste}">
+            <td th:text="${biergarten.name}"></td>
+            <td th:text="${biergarten.bierPreis}"></td>
+            <td><img th:src="${biergarten.bild}" style="width: 50px; height: 50px" /></td>
+        </tr>
+    </table>
+    <div><a href="/speisekarte">Speisekarte</a></div>
+    <div><a href="/biergartenformular">Neuen Biergarten hinzufügen</a></div>
+    <div><a href="/contact">Link to contact</a></div>
+    <div><a href="/FAQ">Link to FAQ</a></div>
+    <div><a href="/impressum">Link to impressum</a></div>
+</body>
+</html>
